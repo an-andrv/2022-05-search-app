@@ -36,10 +36,7 @@ export class AppComponent implements OnDestroy {
       this.reset();
 
       if (this.searchText?.length > MIN_CHARACTERS_TO_SEARCH) {
-        this.repositoriesService.searchByName(this.searchText).pipe(
-          takeUntil(this.onDestroy$),
-          debounceTime(500)
-        ).subscribe({
+        this.repositoriesService.searchByName(this.searchText).pipe(takeUntil(this.onDestroy$)).subscribe({
           next: repositories => {
             this.repositories = repositories;
             this.isNotResults = !repositories.length;
