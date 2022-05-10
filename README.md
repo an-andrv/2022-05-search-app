@@ -1,27 +1,15 @@
-# Search
+# Приложение поиска по репозиториям github.com (используя публичный API https://docs.github.com/en/rest/reference/search#search-repositories).
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.3.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Требования:
+● В приложении должно быть поле для поиска по имени репозитория и список с результатом поиска, расположенный под полем поиска.
+● В списке отображаются только первые 20 результатов в виде названия репозитория и количество его звезд.
+● Результаты должны отображаться по мере набора текста в поле поиска.
+● Поиск осуществляется только в том случае, если введено более 2-х символов в поле поиска.
+● Если нет результатов удовлетворяющих поисковому запросу, выводится соответствующее сообщение.
+● Если в поле поиска введено менее 2-х символов, то список с результатами поиска должен быть пустым.
+● Необходимо обрабатывать ошибки запросов к API и выводить сообщения пользователю.
+● Если запрос к API длится более 1000 мс, то выводится лоадер или соответствующий текст.
+● Значение поля поиска должно сохраняться в query-параметре текущего роутера.
+● Приложение должно быть написано с использованием Angular версии не ниже 10.
+● В коде необходимо использовать rxjs, компоненты и сервисы.
+● Разрешено использовать при необходимости любые ui-библиотеки (Angular Material, Ng-Zorro, Kendo UI и т. п.)
